@@ -15,3 +15,4 @@ function Filter({ onCategoryChange }) {
 }
 
 export default Filter;
+

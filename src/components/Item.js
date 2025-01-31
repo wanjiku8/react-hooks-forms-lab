@@ -1,23 +1,11 @@
-import React, { useState } from "react";
-
+import React from "react";
+import { v4 as uuidv4 } from 'uuid';  
 function Item({ name, category }) {
-  const [isInCart, setIsInCart] = useState(false);
-
-  function handleAddToCartClick() {
-    setIsInCart((isInCart) => !isInCart);
-  }
-
   return (
-    <li className={isInCart ? "in-cart" : ""}>
-      <span>{name}</span>
-      <span className="category">{category}</span>
-      <button
-        className={isInCart ? "remove" : "add"}
-        onClick={handleAddToCartClick}
-      >
-        {isInCart ? "Remove From" : "Add to"} Cart
-      </button>
-    </li>
+    <div className="item">
+      <h3>{name}</h3>
+      <p>{category}</p>
+    </div>
   );
 }
 
